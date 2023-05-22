@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic calculator</title>
+</head>
+
+<body>
+    <label for="leftInput">Left Member:</label>
+    <input type="text" id="leftInput" name="leftInput" />
+    <select id="operator" name="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <label for="rightInput">Right Member:</label>
+    <input type="text" id="rightInput" name="rightInput" />
+    <input type="button" value="Try me!" onclick="calculate()" />
+
+    <script>
+        function calculate() {
+            const left = parseInt(document.getElementById("leftInput").value);
+            const right = parseInt(document.getElementById("rightInput").value);
+            const operator = document.getElementById("operator").value;
+
+            if (isNaN(left) || isNaN(right) || left < 0 || right < 0) {
+                alert("Error :(");
+                return;
+            }
+
+            let result;
+
+            switch (operator) {
+                case "+":
+                    result = left + right;
+                    break;
+                case "-":
+                    result = left - right;
+                    break;
+                case "*":
+                    result = left * right;
+                    break;
+                case "/":
+                    if (right === 0) {
+                        alert("It’s over 9000!");
+                        console.log("Division by zero");
+                        return;
+                    }
+                    result = left / right;
+                    break;
+                case "%":
+                    if (right === 0) {
+                        alert("It’s over 9000!");
+                        console.log("Modulo by zero");
+                        return;
+                    }
+                    result = left % right;
+                    break;
+                default:
+                    alert("Invalid operator");
+                    return;
+            }
+
+            alert(`The result is ${result}`);
+            console.log(`Result: ${result}`);
+        }
+
+        setInterval(() => alert("Please, use me..."), 30000);
+
+    </script>
+</body>
+
+</html>
