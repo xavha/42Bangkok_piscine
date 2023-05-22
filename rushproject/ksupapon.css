@@ -1,0 +1,171 @@
+.layout {
+    height: 94vh;
+    padding-top: 2.75rem;
+}
+
+.typewrite {
+    text-decoration: none;
+    color: #333456;
+    
+}
+
+.progress {
+    background: rgba(255, 255, 255, 0.1);
+    /* justify-content: flex-start; */
+    border-radius: 100px;
+    align-items: center;
+    /* position: relative; */
+    /* padding: 0 5px; */
+    display: flex;
+    height: 40px;
+    width: 300px;
+}
+
+.pg-pad {
+    margin: 50px 50px;
+}
+
+.skill-pad {
+    margin: 44px 50px;
+    color: white;
+}
+
+.box {
+    margin: 80px 50px;
+}
+
+.progress-value {
+    box-shadow: 0 10px 40px -10px #fff;
+    border-radius: 100px;
+    background: #F4ABC4;
+    height: 30px;
+    width: 0;
+}
+
+.animate-css {
+    animation: load-c-css 3s normal forwards;
+}
+
+.animate-html {
+    animation: load-html 3s normal forwards;
+}
+
+.animate-git {
+    animation: load-python-git 3s normal forwards;
+}
+
+.animate-java {
+    animation: load-java 3s normal forwards;
+}
+
+.span-nav {
+    width: 100vw;
+    /* height: 40%; */
+    /* border: solid black; */
+    visibility: hidden;
+}
+
+.prof h5 {
+    color: white;
+}
+
+@keyframes load-c-css {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes load-html {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 75%;
+    }
+}
+
+@keyframes load-python-git {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 85%;
+    }
+}
+
+@keyframes load-java {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 60%;
+    }
+}
+
+.card img {
+    width: 150px;
+    border-radius: 10%;
+}
+
+.contact {
+    gap: 30px;
+}
+
+.contact a,
+.contact p {
+    color: #060930;
+    align-items: center;
+}
+
+@media (max-width:768px) {
+    .progress {
+        background: rgba(255, 255, 255, 0.1);
+        /* justify-content: flex-start; */
+        border-radius: 100px;
+        align-items: center;
+        /* position: relative; */
+        /* padding: 0 5px; */
+        display: flex;
+        height: 30px;
+        width: 100px;
+    }
+
+    .box h5 {
+        font-size: 14px;
+    }
+
+    .skill-pad {
+        margin-left: 10px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-right: 0px;
+    }
+
+    .box {
+        margin: 20px 50px;
+    }
+}
+
+@media (max-width: 1317px) {
+    .skill-eiei {
+        margin: auto;
+    }
+
+    .skill-eiei h5 {
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 575px) {
+    .skill-eiei {
+        text-align: center;
+        word-wrap: break-word;
+    }
+}
